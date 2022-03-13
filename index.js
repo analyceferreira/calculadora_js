@@ -1,31 +1,24 @@
-function soma(arrayNumeros) {
-    let resultado = 0
-    for (i=0; i < arrayNumeros.length; i++){
-        resultado = resultado + arrayNumeros[i]
-    }
-    return resultado
+function soma(...paramets) {
+    return paramets.reduce(function(acumulador, valor){
+        return acumulador + valor
+    })
 }
 
-function subtracao(arrayNumeros) {
-    let resultado = arrayNumeros[0]
-    for (i=1; i < arrayNumeros.length; i++){
-        resultado = resultado - arrayNumeros[i]
-    }
-    return resultado
+function subtracao(...paramets) {
+    return paramets.reduce(function(acumulador, valor){
+        return acumulador - valor
+    })
 }
 
-function multiplicacao(arrayNumeros) {
-    let resultado = arrayNumeros[0]
-    for (i=1; i < arrayNumeros.length; i++){
-        resultado = resultado * arrayNumeros[i]
-    }
-    return resultado
+function multiplicacao(...paramets) {
+    return paramets.reduce(function(acumulador, valor){
+        return acumulador * valor
+    })
 }
 
-function divicao(arrayNumeros) {
-    let resultado = arrayNumeros[0]
-    for (i=1; i < arrayNumeros.length; i++){
-        resultado = resultado / arrayNumeros[i]
-    }
-    return resultado
+function divicao(...paramets) {
+    return paramets.reduce(function(acumulador, valor){
+        return acumulador / valor
+    })
 }
+
